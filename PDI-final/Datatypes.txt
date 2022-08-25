@@ -1,0 +1,5 @@
+1)int ageOfPeople
+2)boolean doorOp
+3)double gwCar
+4)int    NoOfStudents
+5)String StdName

@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Average
+{
+  public static void main(String[] args)
+  {
+    double oddAverage, evenAverage;
+    int num = 0;
+    int[] NumberList = new int[10];
+    String studentName;
+    boolean itIsArlen, oddPositive, itIsZero;
+    int total = 0;
+
+    itIsArlen = true;
+    if(itIsArlen)
+    {
+      studentName = "Arlen";
+    }
+    for(int i=0;i<NumberList.length;i++)
+    {
+    if(NumberList[i]%2!=0);
+      {
+        num++;
+        total += NumberList[i];
+      }
+   }
+      oddAverage = total/num;
+        
+    for(int i=0;i<NumberList.length;i++)
+    {
+      if(NumberList[i]%2==0)
+      {
+
+        num++;
+        total += NumberList[i];
+      }
+    }
+    
+        
+        evenAverage = total/num;
+    }
+}
+

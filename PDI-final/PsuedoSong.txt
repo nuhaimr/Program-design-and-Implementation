@@ -1,0 +1,45 @@
+CONSTRUCTOR with PARAMETERS
+IMPORT: pName(String), pTime(int), pGenre(String)
+EXPORT: none
+ASSERTION:created objects with imported values
+ALGORITHM:
+name = pName
+time = pTime
+genre = pGenre
+
+COPY CONSTRUCTOR
+IMPORT: pSong(Song)
+EXPORT:none
+ASSERTION: created copy of imports
+ALGORITHM:
+name = pSong.getName()
+time = pSong.getTime()
+genre = pSong.getGenre()
+
+DEFAULT CONSTRUCTOR
+IMPORT: none
+EXPORT: none
+ASSERTION:creates object with default values
+ALGORTIHM:
+name = "Nothing"
+time = 276
+genre = "Poprock"
+
+ACCESSOR equals
+IMPORT: inObject(Object)
+EXPORT: isEqual(Boolean)
+ASSERTION: Returns true if two objects equivalent
+ isEqual = FALSE
+ IF  inObject IS A song THEN
+  TRANSFORM inObject TO song NAMED inSong
+   IF name EQUALS inSong.getName() THEN
+    IF time EQUALS inSong.getTime() THEN
+     IF genre EQUALS inSong.getGenre() THEN
+       isEqual = TRUE
+
+ACCESSOR: toString
+IMPORT : none
+EXPORT: SongString(String)
+ASSERTION: Returns a string representation of the object
+ songString = " Song name is: " + name + "Song time is: " + time + "Song genre
+is: " + genre
