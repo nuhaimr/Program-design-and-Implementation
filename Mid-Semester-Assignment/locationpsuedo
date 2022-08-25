@@ -1,0 +1,52 @@
+Nuha Imran
+ID: 2069366
+Date: 10/11/21
+
+--> Location class psuedocode
+
+CONSTRUCTOR with PARAMETERS
+IMPORT: pLatitude (double), pLongitude (double), pRoadNumber(String)
+EXPORT:none
+ASSERTION:created object with imported values
+ALGORITHM:
+roadNumber = pRoadNumber
+longitude = pLongitude
+latitude = pLatitude
+
+COPY CONSTRUCTOR
+IMPORT: pLocation(Location)
+EXPORT: none
+ASSERTION: created a copy of the imports
+ALGORITHM:
+latitude = pLocation.getLatitude()
+longitude = pLocation.getLongitude()
+roadNumber = pLocation.getRoadNumber()
+
+DEFAULT CONSTRUCTOR
+IMPORT: none
+EXPORT: none
+ASSERTION: creates object with default values
+ALGORITHM:
+roadNumber = 1300277
+latitude = -31.9385
+longitude = 115.8696
+
+ACCESSOR: equals
+IMPORT: inObject(Object)
+EXPORT: isEqual(Boolean)
+ASSERTION: Returns true if two objects are equivalent
+ isEqual = FALSE
+  IF inObject IS A location THEN
+   TRANSFORM inObject TO Location NAMED inLocation
+     IF roadNumber EQUALS inLocation.getRoadNumber() THEN
+       IF latitude EQUALS inLocation.getLatitude() THEN
+         IF longitude EQUALS inLocation.getLongitude() THEN
+          isEqual = TRUE
+          
+ACCESSOR: toString
+IMPORT: none
+EXPORT: locationString(String)
+ASSERTION: Returns a string representation of the object
+ locationString = "Road Number is: " + roadNumber + "Latitude is: " + latitude + "Longitude is: " + longitude
+
+

@@ -1,0 +1,525 @@
+Name:Nuha Imran
+ID:20696366
+
+METHOD:furthest
+IMPORT:longitude(double), latitude(double)
+EXPORT:furthest(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+     ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  furthest = get INDEX 0 from arraylist
+  FOR s = 0 TO arraylist size -1 INC BY 1
+   IF s GREATER THAN furthest
+    furthest = s
+   ENDIF
+   GIVE furthest
+  
+   
+     
+METHOD:closest
+IMPORT:longitude(double), latitude(double)
+EXPORT:closest(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+     ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  closest = get INDEX 0 from arraylist
+  FOR distance s= 0 TO arraylist size -1 INC BY 1
+   IF distance s found LESS THAN closest
+    closest = s
+   ENDIF
+   GIVE closest
+
+
+METHOD:furthestfatal
+IMPORT:longitude(double), latitude(double)
+EXPORT:furthestfatal(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     IF Array INDEX 15 is equals to FATAL
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+      ENDIF
+    ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  furtherest = get INDEX 0 from arraylist
+  FOR s = 0 TO arraylist size -1 INC BY 1
+   IF s GREATOR THAN furthest
+    furthest = s
+   ENDIF
+
+  
+METHOD:closestfatal
+IMPORT:longitude(double), latitude(double)
+EXPORT:closestfatal(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     IF Array INDEX 15 is equals to FATAL
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+      ENDIF
+    ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  closest  = get INDEX 0 from arraylist
+  FOR Distnce s = 0 TO arraylist size -1 INC BY 1
+   IF distance s LESS THAN closest
+    closest = s
+ 
+METHOD:furthesthospitalfatal
+IMPORT:longitude(double), latitude(double)
+EXPORT:furthesthospitalfatal(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     IF Array INDEX 15 is equals to Fatal
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+      ENDIF
+    ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  furtherest = get INDEX 0 from arraylist
+  FOR s = 0 TO arraylist size -1 INC BY 1
+   IF distance s GREATOR THAN furthesthospitalfatal
+    furthesthospitalfatal = s
+
+
+METHOD:closesthospitalfatal
+IMPORT:longitude(double), latitude(double)
+EXPORT:closesthospitafatal(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  WHILE (thefile = EOF)
+   STORE file in array object
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     IF Array INDEX 15 is equals to FATAL
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0
+      Add distance to arraylist
+      ENDIF
+    ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  closest  = get INDEX 0 from arraylist
+  FOR distance s = 0 TO arraylist size -1 INC BY 1
+   IF distance s LESS THAN closesthospitalfatal
+    closest = s
+
+
+METHOD:TenKm
+IMPORT:longitude(double), latitude(double)
+EXPORT:TenKm(double)
+ALGORITHM:
+thefile = OPENFILE filename
+READ file as coma seperated
+CREATE arraylist of doubles
+ CREATE file object
+ READ line from file
+ CREATE array object of strings
+  STORE file in array object
+  WHILE (thefile = EOF)
+   CREATE harversineObject //to access harversine formulas
+    IF line does not contain Y
+     IF Array INDEX 15 is equals to FATAL
+     distance = using harversine object( latitude, longitude, longitude1,
+latitude1) //two from file two
+from user
+     IF distance NOT 0.0 AND LESS THAN 10.0
+      Add distance to arraylist
+      ENDIF
+    ENDIF
+   ENDIF
+   CLOSE the file
+  ENDWHILE
+  total accidents = GET array size from Arraylist
+  
+METHOD:PercentTenKm
+IMPORT: latitude(double), longitude(double)
+EXPORT: percent(double)
+ALGORITHM
+Percent = call to tenKm method DIVIDED BY TOTAL multiply by 100
+
+METHOD: Total
+IMPORT: none
+EXPORT: ptotal (int)
+theFile = OPENFILE filename
+lineNum = 0
+READ line FROM theFile // Read first line from file
+WHILE NOT (theFile = EOF) // EOF = end of file.
+// Detecting this is language-specific
+lineNum = lineNum + 1
+DISPLAY(line) // Display line content
+READ line FROM theFile // Read the next line
+ENDWHILE
+CLOSEFILE theFile // Close the file
+END readFile
+
+
+METHOD:fatal
+IMPORT: none
+EXPORT:total(double)
+ALGORITHM:
+thefile = OPEN filename
+READ file as coma seperated
+CREATE array lists of double
+CREATE file object
+CREATE file reader object
+CREATE array object //to store file
+WHILE (thefile = EOF)
+ IF file line does not contain latitude
+  IF Array index 8 is EQUAL to fatal
+   INC total by 1
+  ENDIF
+ ENDIF
+ENDWHILE
+CLOSE the file
+DISPLAY total
+
+METHOD:FatalPercentage
+IMPORT:none
+EXPORT:percentage
+ALGORITHM:
+Percentage= CALL to fatal method/call to total method INTO 100
+Display Percentage
+
+METHOD:hospital
+IMPORT: none
+EXPORT:total(double)
+ALGORITHM:
+thefile = OPEN filename
+READ file as coma seperated
+CREATE array lists of double
+CREATE file object
+CREATE file reader object
+CREATE array object //to store file
+WHILE (thefile = EOF)
+ IF file line does not contain latitude
+  IF Array index 15 is EQUAL to hospital
+   INC total by 1
+  ENDIF
+ ENDIF
+ENDWHILE
+CLOSE the file
+DISPLAY total
+
+METHOD:HospitalPercentage
+IMPORT:none
+EXPORT:percentage(double)
+ALGORITHM:
+Percentage= CALL to hospital method/call to total method INTO 100
+Display Percentage
+
+METHOD:rearend
+IMPORT: none
+EXPORT:total(double)
+ALGORITHM:
+thefile = OPEN filename
+READ file as coma seperated
+CREATE array lists of double
+CREATE file object
+CREATE file reader object
+CREATE array object //to store file
+WHILE (thefile = EOF)
+ IF file line does not contain latitude
+  IF Array index 16 is EQUAL to rearend
+   INC total by 1
+  ENDIF
+ ENDIF
+ENDWHILE
+CLOSE the file
+DISPLAY total
+
+METHOD:RearendPercentage
+IMPORT:none
+EXPORT:percentage(double)
+ALGORITHM:
+Percentage= CALL to rearend method/call to total method INTO 100
+Display Percentage
+
+METHOD:right angle
+IMPORT: none
+EXPORT:total(double)
+ALGORITHM:
+thefile = OPEN filename
+READ file as coma seperated
+CREATE array lists of double
+CREATE file object
+CREATE file reader object
+CREATE array object //to store file
+WHILE (thefile = EOF)
+ IF file line does not contain latitude
+  IF Array index 16 is EQUAL to rightangle
+   INC total by 1
+  ENDIF
+ ENDIF
+ENDWHILE
+CLOSE the file
+DISPLAY total
+
+METHOD:RightanglePercentage
+IMPORT:none
+EXPORT:percentage(double)
+ALGORITHM:
+Percentage= CALL to right angle method/call to total method INTO 100
+Display Percentage
+
+METHOD: latitude
+IMPORT:none 
+EXPORT:pLatitude (double)
+ALGORITHM:
+OPEN file
+File is coma seperated
+MAKE an Array list of doubles
+MAKE file object
+MAKE file Reader object
+MAKE Array object
+ WHILE not end of file
+  Linesplit by coma
+   IF Array index 0 does not contain X
+    Add latitude to array list
+   ENDIF
+  ENDWHILE
+  CLOSE the file
+  GIVE latitude
+  
+METHOD: longitude
+IMPORT:none 
+EXPORT:pLongitude (double)
+ALGORITHM:
+OPEN file
+File is coma seperated
+MAKE an Array list of doubles
+MAKE file object
+MAKE file Reader object
+MAKE Array object
+ WHILE not end of file
+  Linesplit by coma
+   IF Array index 0 does not contain X
+    Add longitude to array list
+   ENDIF
+  ENDWHILE
+  CLOSE the file
+  GIVE longitude
+  
+METHOD:Names
+IMPORT:none 
+EXPORT:pNames (String)
+ALGORITHM:
+OPEN file
+File is coma seperated
+MAKE an Array list of doubles
+MAKE file object
+MAKE file Reader object
+MAKE Array object
+ WHILE not end of file
+  Linesplit by coma
+   IF Array index 0 does not contain X
+    Add names to array list
+   ENDIF
+  ENDWHILE
+  CLOSE the file
+  GIVE Names
+
+MAIN
+thefile = OPEN thefile
+MAKE file object
+CREATE file reader object
+INITIALISE ARRAY OBJECT
+
+int choice //initilaising values
+int select
+double latitude
+double longitude
+DO
+  PRINT 'WELCOME MESSAGE'
+  PRINT 'choice 1'
+  PRINT 'choice 2'
+  PRINT 'choice 3'
+  choice <- ASK USER WITH PROMPT 'Select choice'
+  GET choice
+  IF choice 1
+   ASK USER WITH PROMPT 'latitude?'
+   GET latitude
+   FOR int i=0 i LESS THAN latitude size INC counter by 1
+    IF latitude does not contain latitude entered by user
+     PROMPT USER TO enter correct input
+     GET correct input
+    ENDIF
+   ENDFOR
+    
+   ASK USER WITH PROMPT 'longitude'
+   GET longitude
+   FOR int i=0 i LESS THAN latitude size INC counter by 1
+    IF longitude does not contain lONGITUDE entered by user
+     PROMPT USER TO enter correct input
+     GET correct input
+    ENDIF
+   ENDFOR
+   
+   ASK USER WITH PROMOT 'road Name'
+   GET roadNAME
+   FOR int i=0 i LESS THAN road name size INC counter by 1
+    IF roadname does not contain roadname entered by user
+     PROMPT USER TO enter correct input
+     GET correct input
+    ENDIF
+   ENDFOR
+   CALL to relevant methods //all of these will call to their methods
+   PRINT 'furthest accident'
+   PRINT 'closest accident'
+   PRINT 'furthest fatal'
+   PRINT 'closest fatal'
+   PRINT 'furthest hospital'
+   PRINT 'closest hospital'
+   PRINT 'Accidents within 10km'
+   PRINT 'Accident percentage of 10km'
+  ENDIF
+   ELSE IF choice 2
+    PRINT 'Make selection'
+    PRINT 'Selection 1'
+    PRINT 'Selection 2'
+    PRINT 'Selection 3'
+    PROMPT USER to make selection
+    GET selection
+    IF selection 1
+     CALL to relevant methods
+     PRINT 'Total accidents'
+     PRINT 'Total Fatal Accidents'
+     PRINT 'Percnetage of fatal accidents'
+     PRINT 'Total hospital accidents'
+     PRINT 'Total hospital accident Percentage'
+     PRINT 'Total Rear end accidents'
+     PRINT 'Total Rear end accident Percentage'
+     PRINT 'Total right angle accident'
+     PRINT 'Total right angle percentage'
+   ENDIF
+   ELSE IF selection 2
+    CALL to relevant methods
+     PRINT 'Total accidents'
+     PRINT 'Total Fatal Accidents'
+     PRINT 'Percnetage of fatal accidents'
+     PRINT 'Total hospital accidents'
+     PRINT 'Total hospital accident Percentage'
+     PRINT 'Total Rear end accidents'
+     PRINT 'Total Rear end accident Percentage'
+     PRINT 'Total right angle accident'
+     PRINT 'Total right angle percentage'
+     PROMPT USER to enter a file name
+     GET file Name
+     PRINT to file
+     STOP printing
+      IF file not empty
+       close file
+      ENDIF
+    END ELSEIF
+    ELSE IF selection 3
+     PROMPT USER for file name
+     GET filename
+     PRINT 'Total accidents' to file
+     PRINT 'Total Fatal Accidents' to file
+     PRINT 'Percnetage of fatal accidents' to file
+     PRINT 'Total hospital accidents' to file
+     PRINT 'Total hospital accident Percentage' to file
+     PRINT 'Total Rear end accidents' to file
+     PRINT 'Total Rear end accident Percentage' to file
+     PRINT 'Total right angle accident' to file
+     PRINT 'Total right angle percentage' to file
+     IF file not empty
+      CLOSE file
+     ENDIF
+    END ELSEIF
+  IF option 3
+  PRINT 'bye bye'
+  ENDIF
+  ELSE CHOICE not 1,2,3
+  PRINT 'Enter 1-3'
+  WHILE option not 1,2,3
+  CLOSE file
+  END MAIN
+  END
+   
+   
+
+

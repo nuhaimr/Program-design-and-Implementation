@@ -1,0 +1,76 @@
+Name:Nuha Imran
+ID:20696366
+Date:6/11/21
+
+-->Psuedocode for Accident class
+
+CONSTRUCTOR with PARAMETERS
+IMPORT:pId (String),pDate (String),pTime (String), pSeverity (String),
+pRoadName (String), pIntersectionNumber(String), pEventNature(String),
+pLocation(Object)
+EXPORT:none
+ASSERTION:created object with imported values
+ALGORITHM:
+id = pId
+date = pDate
+time = pTime
+roadName = pRoadName
+severity = pSeverity
+eventNature = pEventNature
+intersectionNumber = pIntersectionNumber
+location = pLocation
+
+COPY CONSTRUCTOR
+IMPORT: pAccident(Accident)
+EXPORT: none
+ASSERTION:created copy of the imports
+ALGORITHM:
+id = pAccident.getId()
+date = pAccident.getDate()
+time = pAccident.getTime()
+roadName = pAccident.getRoadName()
+severity = pAccident.getSeverity()
+eventNature = pAccident.getEventNature()
+intersectionNumber = pAccident.getIntersectionNumber()
+location = pAccident.getLocation()
+
+DEFAULT CONSTURCTOR
+IMPORT: none
+EXPORT: none
+ASSERTION: creates object with default values
+ALGORITHM:
+id = 9797493
+date = 28/5/18
+time = 815
+roadName= Beaufort st
+severity = Medical
+eventNature = Right Angle
+intersectionNumber = 50626
+location = new Location(-31.935, 115.8696, 1300277)
+
+ACCESSOR: equals
+IMPORT: inObject(Object)
+EXPORT: isEqual(Boolean)
+ASSERTION: Returns true if two objects are equivalent
+ isEquals = FALSE
+  IF inObject IS A accident THEN
+   TRANSFORM inObject TO Accident NAMED inAccident
+    IF id EQUALS inAccident.getId() THEN
+     IF date EQUALS inAccident.getDate() THEN
+      IF time EQUALS inAccident.getTime() THEN
+       IF roadName EQUALS inAccident.getRoadName() THEN
+        IF severity EQUALS inAccident.getSeverity() THEN
+         IF eventNature EQUALS inAccident.getEventNature() THEN
+          IF intersectionNumber EQUALS inAccident.getIntersectionNumber() THEN
+            IF location EQUALS inAccident.getLocation() THEN
+             isEqual = TRUE
+
+ACCESSOR: toString
+IMPORT: none
+EXPORT: locationString(String)
+ASSERTION: Returns a string representation of the object
+AccidentString = "Id is: " + id + "date is: " + date + "Time is: " + time
++ "Road Name  is: " + roadName + "Severity is: " + severity + "Event Nature is:
+" + eventNature + "Intersection number is: " + intersectionNumber + "location
+is: " + location 
+
